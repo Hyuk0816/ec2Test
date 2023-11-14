@@ -1,0 +1,29 @@
+spring:
+  datasource:
+    username: ${USER}
+    password: ${PASSWORD}
+    url: ${DB_URL}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  redis:
+    host: ${REDIS}
+    port: 6379
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+security:
+  jwt:
+    header: Authorization
+    secret: 이것은시크릿키야아아아아
+    token-validity-in-seconds: 604800
+
+
+mvc:
+  pathmatch:
+    matching-strategy: ant_path_matcher
+
+logging:
+  level:
+    org.hibernate.SQL: debug
+    org.hibernate.type: trace
